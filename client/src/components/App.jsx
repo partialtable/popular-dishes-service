@@ -88,8 +88,13 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const restaurant = Math.floor(Math.random() * 100);
-    this.getAllDishes(restaurant);
+    var id;
+    if (window.location.href.split('/')[3] === '') {
+      id = Math.floor(Math.random() * 100);
+    } else {
+      id = window.location.href.split('/')[3];
+    }
+    this.getAllDishes(id);
   }
 
   getAllDishes(restrId) {

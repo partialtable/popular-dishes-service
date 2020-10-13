@@ -40,4 +40,5 @@ CREATE TABLE reviews (
 
 /*  Execute this file from the command line by typing:
  *    mysql -u student -p < db/schema.sql
+  *   mysql -u root < db/schema.sql
  *  to create the database and the tables.*/

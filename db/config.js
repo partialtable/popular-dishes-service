@@ -1,7 +1,16 @@
+// module.exports = {
+//   host: 'mysql',
+//   user: 'root',
+//   password: 'hrsf130',
+//   database: 'dishes',
+//   multipleStatements: true,
+// };
+
 module.exports = {
-  host: 'mysql',
+  // host: 'mysql',   // docker ver
+  host: 'localhost',  // localhost ver
   user: 'root',
-  password: 'hrsf130',
+  password: '',
   database: 'dishes',
   multipleStatements: true,
 };
