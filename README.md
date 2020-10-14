@@ -7,7 +7,7 @@ Full stack module for displaying popular dishes of the restaurant
   - https://github.com/partialtable/photos-carousel-service
   - https://github.com/partialtable/bookings-service
   - https://github.com/partialtable/popular-dishes-service
-  - hhttps://github.com/partialtable/reviews-service
+  - https://github.com/partialtable/reviews-service
 
 ## Table of Contents
 
