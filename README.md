@@ -90,6 +90,9 @@ Back End System design of a full stack Popular dishes recommendation service
 ```
 ##### Success Status Code: 204
 
+### Data modelling
+![Data modelling](/data_model.png)
+<!-- Format: ![Alt Text](url) -->
 
 ## Requirements
 
@@ -108,3 +111,4 @@ From within the root directory:
 npm install -g webpack
 npm install
 ```
+
