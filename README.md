@@ -19,7 +19,7 @@ Back End System design of a full stack Popular dishes recommendation service
 ### Server API
 
 #### Get restaurant's popular dishes info
-- GET /api/restaurants/:id/dishes/
+- GET /api/restaurants/:restaurantId/dishes/
 ##### Path Parameters:
 ```sh
 - id : restaurant id
@@ -28,20 +28,22 @@ Back End System design of a full stack Popular dishes recommendation service
 ##### Return: JSON
 ```sh
 {
- "restaurant_id": "35",
+ "restaurant_id": 35,
+ "restaurant_name": "good restaurant",
   "dishes": [
    {
-     name: "Chicken Pot Pie
-     mentions: 8,
-     description: "mashed potatoes, broccolini, mint jelly"
-     reviews: [
+     "dish_name": "Chicken Pot Pie",
+     "mentions": 8,
+     "description": "mashed potatoes, broccolini, mint jelly",
+     "reviews": [
        {
-         user_id: 8,
-         review_id: 5,
-         username: "OpenTableDiner",
-         stars: 5,
-         dined_on: "November 17, 2019",
-         review: "Love the ambiance, service, lighting, food (of course, fried chicken was superb) and Dimitri manages to always greet his guests as if they were family, which is so rare in this town"
+         "review_id": 5,
+         "user_id": 8,
+         "user_name": "OpenTableDiner",
+         "user_avatar": "url_address",
+         "stars": 5,
+         "dined_on": "November 17, 2019",
+         "review": "Love the ambiance, service, lighting, food (of course, fried chicken was superb) and Dimitri manages to always greet his guests as if they were family, which is so rare in this town"
        }
      ]
    },
@@ -50,7 +52,7 @@ Back End System design of a full stack Popular dishes recommendation service
 }
 ```
 #### Add a review's of popular dish
-- POST /api/restaurants/:id/dishes/:id/reviews
+- POST /api/restaurants/:restaurantId/dishes/:dishId/reviews
 ##### Success Status Code: 201
 ##### Request Body: Expects JSON with the following keys.
 ```sh
