@@ -13,6 +13,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, '/../client/dist')));
 
+app.get('/:id', (req, res) => {
+  res.sendFile(path.join(__dirname, '/../client/dist/index.html'));
+});
 // single api call to get all the data about dishes reviews and users of a particular restaurant
 app.get('/api/dishes/restaurant/:id', (req, res) => {
   const finalResponse = {};
@@ -66,5 +69,6 @@ app.get('/api/dishes/restaurant/:id', (req, res) => {
     }
   });
 });
+
 
 module.exports = app;
