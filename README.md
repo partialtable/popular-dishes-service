@@ -19,7 +19,10 @@ Back End System design of a full stack Popular dishes recommendation service
 ### Server API
 
 #### Get restaurant's popular dishes info
-- GET /api/restaurants/:restaurantId/dishes/
+- GET
+```sh
+/api/restaurants/:restaurantId/dishes/
+```
 ##### Path Parameters:
 ```sh
 - id : restaurant id
@@ -28,22 +31,22 @@ Back End System design of a full stack Popular dishes recommendation service
 ##### Return: JSON
 ```sh
 {
- "restaurant_id": 35,
- "restaurant_name": "good restaurant",
   "dishes": [
    {
+     "id": 9,
      "dish_name": "Chicken Pot Pie",
-     "mentions": 8,
-     "description": "mashed potatoes, broccolini, mint jelly",
+     "ingredients": "mashed potatoes, broccolini, mint jelly",
+     "picture": "https://dishestkout.s3-us-west-1.amazonaws.com/13.jpeg",
      "reviews": [
        {
          "review_id": 5,
-         "user_id": 8,
-         "user_name": "OpenTableDiner",
+         "dish_id": 9,
+         "user_id": 49,
          "user_avatar": "url_address",
          "stars": 5,
          "dined_on": "November 17, 2019",
-         "review": "Love the ambiance, service, lighting, food (of course, fried chicken was superb) and Dimitri manages to always greet his guests as if they were family, which is so rare in this town"
+         "review": "Love the ambiance, service, lighting, food (of course, fried chicken was superb) and Dimitri manages to always greet his guests as if they were family, which is so rare in this town",
+         "user_status": 0
        }
      ]
    },
@@ -52,7 +55,10 @@ Back End System design of a full stack Popular dishes recommendation service
 }
 ```
 #### Add a review's of popular dish
-- POST /api/restaurants/:restaurantId/dishes/:dishId/reviews
+- POST
+```sh
+/api/restaurants/:restaurantId/dishes/:dishId/reviews
+```
 ##### Success Status Code: 201
 ##### Request Body: Expects JSON with the following keys.
 ```sh
@@ -67,7 +73,10 @@ Back End System design of a full stack Popular dishes recommendation service
 ```
 
 #### Update a review's of popular dish
-- PATCH /api/restaurants/:id/dishes/:id/reviews/:id
+- PATCH
+```sh
+/api/restaurants/:restaurantId/dishes/:dishId/reviews/:reviewId
+```
 ##### Path Parameters:
 ```sh
 - id : reviews id
@@ -85,14 +94,17 @@ Back End System design of a full stack Popular dishes recommendation service
 ```
 
 #### Delete a review's of popular dish
-- DELETE /api/restaurants/:id/dishes/:id/reviews/:id
+- DELETE
+```sh
+/api/restaurants/:restaurantId/dishes/:dishId/reviews/:reviewId
+```
 ##### Path Parameters:
 ```sh
 - id : reviews id
 ```
 ##### Success Status Code: 204
 
-### Data modelling
+### Data modeling
 ![Data modelling](/data_model.png)
 <!-- Format: ![Alt Text](url) -->
 

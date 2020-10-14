@@ -17,9 +17,10 @@ app.get('/:id', (req, res) => {
   res.sendFile(path.join(__dirname, '/../client/dist/index.html'));
 });
 // single api call to get all the data about dishes reviews and users of a particular restaurant
-app.get('/api/dishes/restaurant/:id', (req, res) => {
+// app.get('/api/dishes/restaurant/:id', (req, res) => {
+app.get('/api/restaurants/:restaurantId/dishes/', (req, res) => {
   const finalResponse = {};
-  db.getAllDishes(req.params.id, (err, data) => {
+  db.getAllDishes(req.params.restaurantId, (err, data) => {
     if (err) {
       console.log(err.sqlMessage);
       res.end('Error quering the database');
