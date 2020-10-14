@@ -1,7 +1,6 @@
-# Project Name
-PartialTable, popular-dishes recommendation service
+# PartialTable
 
-Full stack module for displaying popular dishes of the restaurant
+Back End System design of a full stack Popular dishes recommendation service
 
 ## Related Projects
   - https://github.com/partialtable/photos-carousel-service
