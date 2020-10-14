@@ -9,7 +9,6 @@ CREATE TABLE restaurants (
   PRIMARY KEY (id)
 );
 
-
 CREATE TABLE dishes (
   id INT NOT NULL AUTO_INCREMENT,
   restr_id INT NOT NULL,
@@ -23,6 +22,8 @@ CREATE TABLE users (
   id INT NOT NULL AUTO_INCREMENT,
   name VARCHAR(50),
   avatar VARCHAR(150),
+  first_name VARCHAR(50),
+  last_name VARCHAR(50),
   PRIMARY KEY (id)
 );
 
