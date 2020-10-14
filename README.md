@@ -18,7 +18,7 @@ Back End System design of a full stack Food recommendation service
 
 ### Server API
 
-#### Get all the popular dishes of a restaurant
+### Get all the popular dishes of a restaurant
  * GET `/api/restaurants/:restaurantId/dishes/ `
 
 **Path Parameters:**
@@ -51,13 +51,15 @@ Back End System design of a full stack Food recommendation service
    {...}
   ]
 ```
-#### Add a popular dish
+
+### Add a popular dish
  * POST `/api/restaurants/:restaurantId/dishes`
 
 **Path Parameters:**
   * `id` restaurant id
 
 **Success Status Code**: `201`
+
 **Request Body**: Expects JSON with the following keys.
 ```json
 {
@@ -68,7 +70,7 @@ Back End System design of a full stack Food recommendation service
 }
 ```
 
-#### Update a popular dish info
+### Update a popular dish info
  * PATCH `/api/restaurants/:restaurantId/dishes/:dishId`
 
 **Path Parameters:**
@@ -85,8 +87,8 @@ Back End System design of a full stack Food recommendation service
 }
 ```
 
-#### Delete a popular dish
- * DELETE `/api/restaurants/:restaurantId/dishes/:dishId/reviews/:reviewId`
+### Delete a popular dish
+ * DELETE `/api/restaurants/:restaurantId/dishes/:dishId`
 
 **Path Parameters**:
   * `id` restaurant id
