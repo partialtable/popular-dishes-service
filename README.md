@@ -29,7 +29,7 @@ Back End System design of a full stack Food recommendation service
 
 **Return:** JSON
 ```json
-  [
+[
    {
      "dish_id": 9,
      "dish_name": "Chicken Pot Pie",
