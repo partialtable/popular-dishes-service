@@ -17,14 +17,6 @@ CREATE TABLE dishes (
   picture TEXT
 );
 
-CREATE TABLE users (
-  user_id SERIAL PRIMARY KEY NOT NULL,
-  name TEXT,
-  avatar_url TEXT,
-  first_name TEXT,
-  last_name TEXT
-);
-
 CREATE TABLE reviews (
   review_id SERIAL PRIMARY KEY NOT NULL,
   dish_id INT NOT NULL REFERENCES dishes(dish_id),
@@ -34,3 +26,12 @@ CREATE TABLE reviews (
   stars INT,
   user_status BOOLEAN
 );
+
+CREATE TABLE users (
+  user_id SERIAL PRIMARY KEY NOT NULL,
+  name TEXT,
+  avatar_url TEXT,
+  first_name TEXT,
+  last_name TEXT
+);
+

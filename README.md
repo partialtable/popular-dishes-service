@@ -1,20 +1,19 @@
 # PartialTable
 
-Back End System design of a full stack Food recommendation service
+Back End System design of a full stack popular dishes recommendation service
 
 ## Related Projects
   - https://github.com/partialtable/photos-carousel-service
   - https://github.com/partialtable/bookings-service
-  - https://github.com/partialtable/popular-dishes-service
   - https://github.com/partialtable/reviews-service
 
 ## Table of Contents
 
-1. [Usage](#Usage)
+1. [CRUD/API Usage](#Usage)
 1. [Requirements](#requirements)
 1. [Development](#development)
 
-## Usage
+## CRUD/API Usage
 
 ### Server API
 
