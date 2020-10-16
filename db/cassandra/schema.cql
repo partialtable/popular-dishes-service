@@ -6,12 +6,12 @@ CREATE KEYSPACE dishes_service_keyspace WITH REPLICATION = {'class': 'SimpleStra
 
 USE dishes_service_keyspace;
 
-CREATE TABLE restaurants (
+CREATE TABLE restaurant_by_id (
   restaurant_id int PRIMARY KEY,
-  name varchar
+  name text
 );
 
-CREATE TABLE users (
+CREATE TABLE user_by_id (
   user_id int PRIMARY KEY,
   name TEXT,
   avatar_url TEXT,
@@ -20,11 +20,11 @@ CREATE TABLE users (
 );
 
 CREATE TABLE dishes_by_restaurant (
-  restaurant_id int PRIMARY KEY,
-  dish_id int PRIMARY KEY,
-  name varchar,
-  ingredients varchar,
-  picture varchar,
+  restaurant_id int,
+  dish_id int,
+  name text,
+  ingredients text,
+  picture text,
   PRIMARY KEY (restaurant_id, dish_id)
 )
 
@@ -36,7 +36,7 @@ CREATE TABLE reviews_by_dish (
   user_id int,
   review varchar,
   dined_on date,
-  stars int,
+  stars decimal,
   user_status boolean
   PRIMARY KEY (restaurant_id, dish_id, review_id, user_id)
 )
