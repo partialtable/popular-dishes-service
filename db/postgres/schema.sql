@@ -6,7 +6,12 @@ CREATE DATABASE dishes_service;
 
 CREATE TABLE restaurants (
   restaurant_id SERIAL PRIMARY KEY NOT NULL,
-  name CHAR(50)
+  name CHAR(50),
+  city text,
+  state text,
+  zip_code text,
+  phone text,
+  email text
 );
 
 CREATE TABLE dishes (
@@ -32,6 +37,8 @@ CREATE TABLE users (
   name TEXT,
   avatar_url TEXT,
   first_name TEXT,
-  last_name TEXT
+  last_name TEXT,
+  phone TEXT,
+  email TEXT
 );
 
